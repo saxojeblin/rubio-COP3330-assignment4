@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="465.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Button layoutX="138.0" layoutY="33.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="190.0" style="-fx-background-color: #9D98F7;" text="Save a To Do List's Items">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font size="15.0" />
+            </font></Button>
+        <Button layoutX="138.0" layoutY="131.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="190.0" style="-fx-background-color: #9D98F7;" text="Save All To Do List Items">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font size="15.0" />
+            </font></Button>
+      <Button layoutX="138.0" layoutY="230.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="190.0" style="-fx-background-color: #9D98F7;" text="Load a To Do List">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="138.0" layoutY="334.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="190.0" style="-fx-background-color: #9D98F7;" text="Load Multiple To Do Lists">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

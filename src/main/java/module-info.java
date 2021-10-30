@@ -5,4 +5,3 @@ module rubio.COP3330.assignment4.main {
     opens ucf.assignments to javafx.fxml;
     exports ucf.assignments;
 }
-
