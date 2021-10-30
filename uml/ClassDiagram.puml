@@ -1,0 +1,57 @@
+@startuml
+
+class App {
+    +void main()
+    +void addToDoList()
+    +void removeToDoList()
+    +void editTitleToDoList()
+    +void addItemToDoList()
+    +void removeItemToDoList()
+    +void editToDoListItemDescription()
+    +void editToDoListItemDueDate()
+    +void markToDoListItemComplete()
+    +void displayAllToDoListItems()
+    +void displayAllToDoListIncompleteItems()
+    +void displayAllToDoListCompleteItems()
+    +void sortToDoListByDate()
+    +void saveToDoList()
+    +void saveAllToDoLists()
+    +void loadToDoList()
+    +void loadAllToDoLists()
+}
+
+App <- ToDoList
+
+class ToDoList  {
+    -String title
+    -ArrayList<Item> items
+    +String getTitle()
+    +ArrayList<Item> getItemList()
+    +void editTitle()
+    +void addItem()
+    +void removeItem()
+    +void editItemDescription()
+    +void editDueDate()
+    +void markItemComplete()
+    +void displayAllItems()
+    +void displayIncompleteItems()
+    +void displayCompleteItems()
+    +void sortByDate
+    +void saveItems()
+}
+
+ToDoList <- Item
+
+class Item {
+    -String description
+    -String dueDate
+    -Boolean complete
+    +void editDescription()
+    +void editDueDate()
+    +void markComplete()
+    +void displayItem()
+    +void getDescription()
+    +void getDueDate()
+    +void getComplete()
+}
+@enduml
