@@ -8,28 +8,20 @@ package ucf.assignments;
 import java.io.File;
 import java.util.ArrayList;
 
+import static ucf.assignments.FXMLController.toDoList;
+
 public class ToDoList {
-    /*  Attributes:
-        (private) Title (string)
-        (private) Item object list
-    */
 
-    public ToDoList(String title, ArrayList<Item> items) {
-        /*
-            Set title as this ToDoList's title
-            Set items as this ToDoList's item list
-        */
-    }
+    private ArrayList<Item> items = new ArrayList<>();
 
-    public String getTitle() {
-        //returns the title of the ToDoList
-        return ""; //TEMP LITERAL RETURN
+    public ToDoList(ArrayList<Item> items) {
+        //Set items as this ToDoList's item list
+        this.items = items;
     }
 
     public ArrayList<Item> getItemList() {
         //returns the title of the ToDoList
-        ArrayList<Item> item = new ArrayList<>();   //TEMP VALUE TO RETURN
-        return item; //TEMP LITERAL RETURN
+        return this.items;
     }
 
     public void editTitle(String newTitle) {
@@ -41,54 +33,92 @@ public class ToDoList {
             //Set new item's description to its description
             //Set new item's dueDate to its due date
             //Set new item's complete to its completion status
+        Item item = new Item(description, dueDate, complete);
         //Add the item to this ToDoList's item list
+        this.items.add(item);
     }
 
     public void removeItem(int index) {
         //Remove item from item list with index 'index'
+        this.getItemList().remove(index);
+    }
+
+    public void clearAllItems() {
+        this.getItemList().clear();
     }
 
     public void editItemDescription(int index, String newDescription) {
         //Call the ToDoList's item at given index
+        this.getItemList().get(index).editDescription(newDescription);
         //Use editDescription() in item class
-            //Pass into method newDescription
     }
 
     public void editDueDate(int index, String newDueDate) {
         //Get the ToDoList's item at given index
+        this.getItemList().get(index).editDueDate(newDueDate);
         //Call editDueDate() in item class
-            //Pass into method newDueDate
     }
 
     public void markItemComplete(int index) {
         //Get the ToDoList's item at given index
-        //Call editDueDate in item class
+        this.getItemList().get(index).markComplete();
+        //Call markComplete in item class
     }
 
-    public void displayAllItems() {
-        //Declare an int to be size of item list
-        //For loop amount of times to that int
-            //Call displayItem() using item of index 'i' from the loop
+    public String displayAllItems() {
+        String completion;
+        StringBuilder stb = new StringBuilder();
+
+        int listSize = this.getItemList().size();
+        for (int i = 0; i < listSize; i++) {
+            int itemNum = i + 1;
+            stb.append("ITEM " + itemNum + ":\n");
+            stb.append("Description: " + this.getItemList().get(i).getDescription() + "\n");
+            stb.append("Due Date: " + this.getItemList().get(i).getDueDate() + "\n");
+            if (this.getItemList().get(i).getComplete() == true) {
+                completion = "Complete.";
+            }
+            else  {
+                completion  = "Incomplete.";
+            }
+            stb.append("Status: " + completion + "\n\n");
+        }
+        return stb.toString();
+
     }
 
-    public void displayIncompleteItems() {
-        //Declare an int to be size of item list
-        //For loop amount of times to that int
-            //Find given object at index 'i' from loop
-            //Determine its value of 'complete' attribute
-            //If complete is FALSE--
-                //call displayItem() of that item
-            //else do nothing and continue
+    public String displayIncompleteItems() {
+        StringBuilder stb = new StringBuilder();
+
+        int listSize = this.getItemList().size();
+        for (int i = 0; i < listSize; i++) {
+            int itemNum = i + 1;
+            if (this.getItemList().get(i).getComplete() == false) {
+                stb.append("ITEM " + itemNum + ":\n");
+                stb.append("Description: " + this.getItemList().get(i).getDescription() + "\n");
+                stb.append("Due Date: " + this.getItemList().get(i).getDueDate() + "\n");
+                stb.append("Status: Incomplete\n\n");
+            }
+
+        }
+        return stb.toString();
     }
 
-    public void displayCompleteItems() {
-        //Declare an int to be size of item list
-        //For loop amount of times to that int
-            //Find given object at index 'i' from loop
-            //Determine its value of 'complete' attribute
-            //If complete is TRUE--
-                //call displayItem() of that item
-            //else do nothing and continue
+    public String displayCompleteItems() {
+        StringBuilder stb = new StringBuilder();
+
+        int listSize = this.getItemList().size();
+        for (int i = 0; i < listSize; i++) {
+            int itemNum = i + 1;
+            if (this.getItemList().get(i).getComplete() == true) {
+                stb.append("ITEM " + itemNum + ":\n");
+                stb.append("Description: " + this.getItemList().get(i).getDescription() + "\n");
+                stb.append("Due Date: " + this.getItemList().get(i).getDueDate() + "\n");
+                stb.append("Status: Complete\n\n");
+            }
+
+        }
+        return stb.toString();
     }
 
     public void sortByDate() {

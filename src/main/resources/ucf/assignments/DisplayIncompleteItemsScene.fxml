@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.FXMLController">
+   <children>
+      <Text layoutX="204.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Incomplete Items">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="incompleteItemsTextArea" editable="false" focusTraversable="false" layoutX="41.0" layoutY="63.0" prefHeight="254.0" prefWidth="518.0" promptText="Please press 'Display Items' to view all incomplete items.">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextArea>
+      <Button focusTraversable="false" layoutX="116.0" layoutY="326.0" mnemonicParsing="false" onAction="#fillIncompleteItemsText" prefHeight="60.0" prefWidth="110.0" text="Display Items" />
+      <Button focusTraversable="false" layoutX="370.0" layoutY="326.0" mnemonicParsing="false" onAction="#doneDisplayIncompleteButtonAction" prefHeight="60.0" prefWidth="110.0" text="Done" />
+   </children>
+</AnchorPane>
