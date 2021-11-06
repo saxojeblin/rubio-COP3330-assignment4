@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="430.0" prefWidth="650.0" style="-fx-background-color: #D0D0D0;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.FXMLController">
    <children>
       <Button layoutX="89.0" layoutY="319.0" mnemonicParsing="false" onAction="#loadFileTextArea" prefHeight="65.0" prefWidth="130.0" style="-fx-background-color: #9D98F7; -fx-border-color: #000000;" text="Select File...">
@@ -37,7 +36,10 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <Label fx:id="loadFileErrorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="59.0" layoutY="287.0" prefHeight="17.0" prefWidth="533.0" textFill="RED" />
+      <Label fx:id="loadFileErrorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="59.0" layoutY="287.0" prefHeight="17.0" prefWidth="533.0" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
       <Text layoutX="314.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" />
    </children>
 </AnchorPane>

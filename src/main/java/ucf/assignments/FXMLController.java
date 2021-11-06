@@ -165,12 +165,14 @@ public class FXMLController implements Initializable {
                 descError.setText("Please ensure description is between 1-256 characters.");
         }
         else {
+                descError.setText("");
                 checkDesc = true;
         }
         if (!due.matches("^([0-9]{4}[-/]?((0[13-9]|1[012])[-/]?(0[1-9]|[12][0-9]|30)|(0[13578]|1[02])[-/]?31|02[-/]?(0[1-9]|1[0-9]|2[0-8]))|([0-9]{2}(([2468][048]|[02468][48])|[13579][26])|([13579][26]|[02468][048]|0[0-9]|1[0-6])00)[-/]?02[-/]?29)$")) {
                 dueError.setText("Please ensure due date is in Gregorian Calendar format (YYYY-MM-DD) and is a valid date");
         }
         else {
+            dueError.setText("");
             checkDue = true;
         }
         if(checkDesc == true && checkDue == true) {
@@ -287,10 +289,11 @@ public class FXMLController implements Initializable {
              itemNum -= 1;
              if(itemNum >= toDoList.getItemList().size() || itemNum < 0) {
                  invalidItemNumberLabel.setText("Invalid Item Number: Item Number doesn't exist");
-                 invalidItemNumberHelpLabel.setText("Note: If you don't know the item's number you'd like to edit, please cancel and refer to\n'Display -> Show All Items' to find the item's number.");
+                 invalidItemNumberHelpLabel.setText("Note: If you don't know the item's number you'd like to edit, please cancel and refer to\n'Display -> Show All Items' to view the item's number.");
              }
              else  {
-                checkNum = true;
+                 invalidItemNumberLabel.setText("");
+                 checkNum = true;
              }
         }
         catch (NumberFormatException e) {
@@ -301,6 +304,7 @@ public class FXMLController implements Initializable {
             newDescriptionError.setText("Please ensure description is between 1-256 characters.");
         }
         else {
+            newDescriptionError.setText("");
             checkDesc = true;
         }
 
@@ -334,9 +338,10 @@ public class FXMLController implements Initializable {
             itemNum -= 1;
             if(itemNum >= toDoList.getItemList().size() || itemNum < 0) {
                 invalidItemNumberLabel2.setText("Invalid Item Number: Item Number doesn't exist");
-                invalidItemNumberHelpLabel2.setText("Note: If you don't know the item's number you'd like to edit, please cancel and refer to\n'Display -> Show All Items' to find the item's number.");
+                invalidItemNumberHelpLabel2.setText("Note: If you don't know the item's number you'd like to edit, please cancel and refer to\n'Display -> Show All Items' to view the item's number.");
             }
             else  {
+                invalidItemNumberLabel2.setText("");
                 checkNum = true;
             }
         }
@@ -348,6 +353,7 @@ public class FXMLController implements Initializable {
             newDueDateError.setText("Please ensure due date is in Gregorian Calendar format (YYYY-MM-DD) and is a valid date");
         }
         else {
+            newDueDateError.setText("");
             checkDesc = true;
         }
 
@@ -380,7 +386,7 @@ public class FXMLController implements Initializable {
             itemNum -= 1;
             if(itemNum >= toDoList.getItemList().size() || itemNum < 0) {
                 markCompleteItemNumberError.setText("Invalid Item Number: Item Number doesn't exist");
-                markCompleteItemNumberHelp.setText("Note: If you don't know the item's number you'd like to edit, please cancel and refer to\n'Display -> Show All Items' to find the item's number.");
+                markCompleteItemNumberHelp.setText("Note: If you don't know the item's number you'd like to edit, please cancel and refer to\n'Display -> Show All Items' to view the item's number.");
             }
             else  {
                 checkNum = true;
@@ -419,7 +425,7 @@ public class FXMLController implements Initializable {
             itemNum -= 1;
             if(itemNum >= toDoList.getItemList().size() || itemNum < 0) {
                 deleteItemError.setText("Invalid Item Number: Item Number doesn't exist");
-                deleteItemHelp.setText("Note: If you don't know the item's number you'd like to delete, please cancel and refer to\n'Display -> Show All Items' to find the item's number.");
+                deleteItemHelp.setText("Note: If you don't know the item's number you'd like to delete, please cancel and refer to\n'Display -> Show All Items' to view the item's number.");
             }
             else  {
                 checkNum = true;
@@ -510,6 +516,7 @@ public class FXMLController implements Initializable {
             File file = fileChooser.showOpenDialog(new Stage());
             try {
                 Scanner scanner = new Scanner(file);
+                loadFileErrorLabel.setText("");
                 while(scanner.hasNextLine()) {
                     loadFileTextArea.appendText(scanner.nextLine() + "\n");
                 }

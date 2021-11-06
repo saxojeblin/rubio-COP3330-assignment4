@@ -14,12 +14,12 @@
          <font>
             <Font size="14.0" />
          </font></TextField>
-      <Text layoutX="198.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter a description:">
+      <Text layoutX="233.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter a description:">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
-      <Text layoutX="209.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter a due date:">
+      <Text layoutX="244.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter a due date:">
          <font>
             <Font size="22.0" />
          </font>
@@ -35,8 +35,14 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Label fx:id="descError" layoutX="174.0" layoutY="133.0" prefHeight="17.0" prefWidth="302.0" textFill="#f51818" />
-      <Label fx:id="dueError" layoutX="88.0" layoutY="258.0" prefHeight="17.0" prefWidth="476.0" textFill="#f51818" />
+      <Label fx:id="descError" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="133.0" prefHeight="20.0" prefWidth="609.0" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="dueError" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="262.0" prefHeight="20.0" prefWidth="609.0" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
       <Button layoutX="79.0" layoutY="321.0" mnemonicParsing="false" onAction="#cancelAddItem" prefHeight="65.0" prefWidth="130.0" style="-fx-background-color: #FA5349; -fx-border-color: #000000;" text="Cancel">
          <font>
             <Font size="18.0" />

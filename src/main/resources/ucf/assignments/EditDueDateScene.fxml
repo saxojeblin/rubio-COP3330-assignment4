@@ -19,7 +19,10 @@
          <font>
             <Font size="14.0" />
          </font></TextField>
-      <Label fx:id="newDueDateError" alignment="CENTER" layoutX="69.0" layoutY="244.0" prefHeight="17.0" prefWidth="510.0" textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="newDueDateError" alignment="CENTER" layoutX="47.0" layoutY="244.0" prefHeight="17.0" prefWidth="556.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
       <Button focusTraversable="false" layoutX="404.0" layoutY="287.0" mnemonicParsing="false" onAction="#submitNewDueDateButton" prefHeight="65.0" prefWidth="130.0" style="-fx-background-color: #37B958; -fx-border-color: #000000;" text="Submit">
          <font>
             <Font size="18.0" />
@@ -36,8 +39,14 @@
          <font>
             <Font size="20.0" />
          </font></TextField>
-      <Label fx:id="invalidItemNumberLabel2" alignment="CENTER" contentDisplay="CENTER" layoutX="115.0" layoutY="118.0" prefHeight="17.0" prefWidth="419.0" textAlignment="CENTER" textFill="RED" />
-      <Label fx:id="invalidItemNumberHelpLabel2" alignment="CENTER" contentDisplay="CENTER" layoutX="47.0" layoutY="383.0" prefHeight="33.0" prefWidth="556.0" textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="invalidItemNumberLabel2" alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="118.0" prefHeight="17.0" prefWidth="556.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="invalidItemNumberHelpLabel2" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0" layoutY="374.0" prefHeight="46.0" prefWidth="556.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
       <Button focusTraversable="false" layoutX="115.0" layoutY="287.0" mnemonicParsing="false" onAction="#cancelEditDueDate" prefHeight="65.0" prefWidth="130.0" style="-fx-background-color: #FA5349; -fx-border-color: #000000;" text="Cancel">
          <font>
             <Font size="18.0" />

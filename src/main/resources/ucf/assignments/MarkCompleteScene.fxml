@@ -33,7 +33,13 @@
          <font>
             <Font size="18.0" />
          </font></Button>
-      <Label fx:id="markCompleteItemNumberError" alignment="CENTER" layoutX="64.0" layoutY="154.0" prefHeight="17.0" prefWidth="522.0" textAlignment="CENTER" textFill="RED" />
-      <Label fx:id="markCompleteItemNumberHelp" alignment="CENTER" layoutX="64.0" layoutY="190.0" prefHeight="50.0" prefWidth="522.0" textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="markCompleteItemNumberError" alignment="CENTER" layoutX="43.0" layoutY="154.0" prefHeight="20.0" prefWidth="564.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="markCompleteItemNumberHelp" alignment="CENTER" layoutX="43.0" layoutY="186.0" prefHeight="58.0" prefWidth="564.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
    </children>
 </AnchorPane>

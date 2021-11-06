@@ -19,22 +19,25 @@
          <font>
             <Font size="14.0" />
          </font></TextField>
-      <Button layoutX="104.0" layoutY="266.0" mnemonicParsing="false" onAction="#cancelSaveToDoList" prefHeight="65.0" prefWidth="130.0" style="-fx-background-color: #FA5349; -fx-border-color: #000000;" text="Cancel">
+      <Button layoutX="104.0" layoutY="202.0" mnemonicParsing="false" onAction="#cancelSaveToDoList" prefHeight="65.0" prefWidth="130.0" style="-fx-background-color: #FA5349; -fx-border-color: #000000;" text="Cancel">
          <font>
             <Font size="18.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button layoutX="389.0" layoutY="266.0" mnemonicParsing="false" onAction="#submitSaveToDoList" prefHeight="65.0" prefWidth="130.0" style="-fx-background-color: #37B958; -fx-border-color: #000000;" text="Save">
+      <Button layoutX="415.0" layoutY="202.0" mnemonicParsing="false" onAction="#submitSaveToDoList" prefHeight="65.0" prefWidth="130.0" style="-fx-background-color: #37B958; -fx-border-color: #000000;" text="Save">
          <font>
             <Font size="18.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Label fx:id="fileNameErrorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="180.0" prefHeight="17.0" prefWidth="387.0" textAlignment="CENTER" textFill="RED" />
-      <Text layoutX="22.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="**Important Note: You may need to close the application to view the created file.">
+      <Label fx:id="fileNameErrorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="64.0" layoutY="133.0" prefHeight="17.0" prefWidth="522.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Text layoutX="22.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="**Important Note: You may need to close the application to view the created file.">
          <font>
             <Font size="17.0" />
          </font>
