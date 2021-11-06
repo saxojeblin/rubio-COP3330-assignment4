@@ -8,6 +8,7 @@ package ucf.assignments;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.AccessibleAction;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -17,20 +18,27 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
+import java.util.Scanner;
 
-public class FXMLController{
+public class FXMLController implements Initializable {
     //Our ToDoList with its list of items
     public static ArrayList<Item> items = new ArrayList<>();
     public static ToDoList toDoList = new ToDoList(items);
 
     private Stage stage;
     private Scene scene;
+
+    FileChooser fileChooser = new FileChooser();
 
     @FXML
     private Label descError;
@@ -58,6 +66,8 @@ public class FXMLController{
     private Label deleteItemHelp;
     @FXML
     private Label fileNameErrorLabel;
+    @FXML
+    private Label loadFileErrorLabel;
 
     @FXML
     private BorderPane mainPane;
@@ -87,6 +97,8 @@ public class FXMLController{
     private TextArea completeItemsTextArea;
     @FXML
     private TextArea incompleteItemsTextArea;
+    @FXML
+    private TextArea loadFileTextArea;
 
     @FXML
     public void setMainScene(ActionEvent event) throws IOException {
@@ -185,7 +197,7 @@ public class FXMLController{
     private void fillAllItemsText(ActionEvent event) {
         String itemInfo;
         if (toDoList.getItemList().size() == 0) {
-            allItemsTextArea.appendText("There are currently no items in the list\n");
+            allItemsTextArea.appendText("There are currently no items in the list.\n");
         }
         else {
             itemInfo = toDoList.displayAllItems();
@@ -407,7 +419,7 @@ public class FXMLController{
             itemNum -= 1;
             if(itemNum >= toDoList.getItemList().size() || itemNum < 0) {
                 deleteItemError.setText("Invalid Item Number: Item Number doesn't exist");
-                deleteItemHelp.setText("Note: If you don't know the item's number you'd like to edit, please cancel and refer to\n'Display -> Show All Items' to find the item's number.");
+                deleteItemHelp.setText("Note: If you don't know the item's number you'd like to delete, please cancel and refer to\n'Display -> Show All Items' to find the item's number.");
             }
             else  {
                 checkNum = true;
@@ -490,6 +502,34 @@ public class FXMLController{
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    private void loadFileTextArea (ActionEvent event) {
+        try {
+            File file = fileChooser.showOpenDialog(new Stage());
+            try {
+                Scanner scanner = new Scanner(file);
+                while(scanner.hasNextLine()) {
+                    loadFileTextArea.appendText(scanner.nextLine() + "\n");
+                }
+            } catch (FileNotFoundException e) {
+                loadFileErrorLabel.setText("Error: Please ensure you are selecting and opening a valid file.");
+            }
+        }
+        catch (Exception e) {
+            loadFileErrorLabel.setText("Error: Please ensure you are selecting and opening a valid file.");
+        }
+    }
+
+    @FXML
+    private void submitLoadFileButton(ActionEvent event) throws IOException {
+        setMainScene(event);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        fileChooser.setInitialDirectory(new File("src/main/java/ucf/assignments/"));
     }
 
 
