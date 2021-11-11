@@ -6,50 +6,42 @@
 package ucf.assignments;
 
 public class Item {
-    /*  Attributes:
-        Description
-        Due Date
-        Status on if complete
-    */
+
+    private String description;
+    private String dueDate;
+    private boolean complete;
+
 
     public Item (String description, String dueDate, boolean complete)  {
-        /*
-            Set description to this item's description
-            Set dueDate to this item's due date
-            Set complete to this item's completion status
-        */
+        this.description = description;
+        this.dueDate = dueDate;
+        this.complete = complete;
     }
 
     public void editDescription(String newDescription) {
         //Set this.description equal to newDescription
+        this.description = newDescription;
     }
 
     public void editDueDate(String newDueDate) {
         //Set this.dueDate equal to newDueDate
+        this.dueDate = newDueDate;
     }
 
     public void markComplete() {
         //Set this.complete equal to 'true'
-    }
-
-    public void displayItem() {
-        //Print out the item's description
-        //Print out the item's due date
-        //Print out the item's completion status
+        this.complete = true;
     }
 
     public String getDescription() {
-        //returns the description of the item
-        return "";  //TEMP LITERAL RETURN
+        return this.description;
     }
 
     public String getDueDate() {
-        //returns the description of the item
-        return "";  //TEMP LITERAL RETURN
+        return this.dueDate;
     }
 
     public boolean getComplete() {
-        //returns the description of the item
-        return true;    //TEMP LITERAL RETURN
+        return this.complete;
     }
 }

@@ -6,7 +6,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Text layoutX="56.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This application is designed to manage multiple to do lists. A to do list has a title and a list of items. Items have a description, due date, and state of completion." wrappingWidth="480.6328125">
+      <Text layoutX="51.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This application is designed to manage a single to-do list, which is composed of a list of items. Items have a description, due date, and state of completion." wrappingWidth="490.6328125">
          <font>
             <Font size="18.0" />
          </font>
@@ -16,22 +16,22 @@
             <Font name="System Italic" size="25.0" />
          </font>
       </Text>
-      <Text layoutX="58.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. To Do List - allows user to create/delete/edit a to do list">
+      <Text layoutX="43.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Add/Delete - allows user to create/delete an item or clear all items">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <Text layoutX="58.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Item - allows user to create/delete/edit an item in a to do list">
+      <Text layoutX="41.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Edit - allows user to edit an item's description/due date and mark complete">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <Text layoutX="58.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Display - allows user to see the information of items in a to do list">
+      <Text layoutX="43.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Display - allows user to see all/complete/incomplete items">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <Text layoutX="59.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4. Save/Load - allows user to load or save to do lists to/from external storage">
+      <Text layoutX="43.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4. Save/Load - allows user to load or save items to/from external storage">
          <font>
             <Font size="14.0" />
          </font>
