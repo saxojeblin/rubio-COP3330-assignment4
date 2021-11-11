@@ -28,21 +28,21 @@
             <font>
                 <Font size="15.0" />
             </font></Button>
-      <Button layoutX="158.0" layoutY="338.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #9D98F7;" text="Mark Complete">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
-      <Button layoutX="158.0" layoutY="262.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #9D98F7;" text="Edit Due Date">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
+        <Button layoutX="158.0" layoutY="338.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #9D98F7;" text="Mark Complete">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button layoutX="158.0" layoutY="262.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #9D98F7;" text="Edit Due Date">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
     </children>
 </AnchorPane>

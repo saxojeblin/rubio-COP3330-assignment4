@@ -44,25 +44,25 @@ public class App extends Application {
     /* Method: edit the title of a ToDoList in the list */
     public static void editTitleToDoList(ToDoList list, String newTitle) {
         //Call ToDoList's editTitle() with list
-            //Pass in newTitle
+        //Pass in newTitle
     }
 
     /* ---Methods to build/edit items within a ToDoList--- */
     /* Method: add an item to a ToDoList given its attributes */
     public static void addItemToDoList(ToDoList list, String description, String dueDate, boolean complete) {
         //Call ToDoList's addItem() with list
-            //Pass in description, dueDate, and complete
+        //Pass in description, dueDate, and complete
     }
     /* Method: remove a specific item in a ToDoList */
     public static void removeItemToDoList(ToDoList list, int index) {
         //Call ToDoList's removeItem() with list
-            //Pass in the index of the item to be removed
+        //Pass in the index of the item to be removed
 
     }
     /* Method: edit a specific item's description in a ToDoList */
     public static void editToDoListItemDescription(ToDoList list, int index, String newDescription) {
         //Call ToDoList's editItemDescription() using list
-            //Pass into function call index and newDescription
+        //Pass into function call index and newDescription
     }
     /* Method: edit a specific item's due date in a ToDoList */
     public static void editToDoListItemDueDate(ToDoList list, int index, String newDescription) {
@@ -108,9 +108,9 @@ public class App extends Application {
         //Open file and get in proper form to write into
         //Get an int of size of lists
         //For loop with 'i' with that int
-            //Get ToDoList object from index 'i' of lists
-            //Use saveItems() from ToDoList
-                //Pass in the object and file
+        //Get ToDoList object from index 'i' of lists
+        //Use saveItems() from ToDoList
+        //Pass in the object and file
         //Close file
     }
     /* Method: load the contents of a file into a ToDoList */
@@ -124,8 +124,8 @@ public class App extends Application {
     public static void loadAllToDoLists(ArrayList<ToDoList> lists, File file) {
         // Read the input file
         // Loop through the input, going through each to do list at a time
-            //Store each piece of ToDoList information from file into temp variables
-            //Call addToDoList() and addItemToDoList() to create the to do list and the items being added
+        //Store each piece of ToDoList information from file into temp variables
+        //Call addToDoList() and addItemToDoList() to create the to do list and the items being added
         //Close input file
     }
 }

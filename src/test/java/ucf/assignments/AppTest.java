@@ -23,9 +23,9 @@ public class AppTest {
     public void testAddToDoList() {
         //Create two ToDoList arrays: one expected and one actual
         //Create the expected ToDoList using hard coded values
-            //Add that ToDoList to the expected array
+        //Add that ToDoList to the expected array
         //Create a ToDoList with the same values using AddToDoList()
-            //Add that ToDoList to the actual array
+        //Add that ToDoList to the actual array
         //Assert equal both the ToDoList lists attributes
     }
 
@@ -33,7 +33,7 @@ public class AppTest {
     public void testRemoveToDoList() {
         //Create two ToDoList arrays: one expected and one actual
         //Create two expected ToDoLists using hard coded values
-            //Add those ToDoLists to the expected and the actual array
+        //Add those ToDoLists to the expected and the actual array
         //Use .remove for the expected ToDoList on the second ToDoList
         //Use removeToDoList() to remove the second ToDoList in actual
         //Assert equal both the ToDoList lists
@@ -94,7 +94,7 @@ public class AppTest {
     @Test
     public void testSortToDoListByDate() {
         //Create a ToDoList '1' with items 'a', 'b', 'c', 'd', and 'e'
-            //Add the items in order with respect to due date
+        //Add the items in order with respect to due date
         //Create ToDoList '2' with the same items as '1' but in a random, incorrect order
         //Use sortToDoListByDate() on '2'
         //assert equal each item by index of '1' and '2'
@@ -107,7 +107,7 @@ public class AppTest {
         //Create a ToDoList with the same item objects as '1' called '2'
         //Use displayAllToDoItems() with '2'
         //Use displayAllToDoItems() with '1'
-            //assert equal that they return/print the same
+        //assert equal that they return/print the same
     }
 
     @Test
@@ -116,7 +116,7 @@ public class AppTest {
         //Create a ToDoList with item objects that has all of '1', but also a few random complete items, called '2'
         //Use displayAllToDoListIncompleteItems() on '2'
         //Use displayAllItems() on '1'
-            //assert equal they return/print the same
+        //assert equal they return/print the same
     }
 
     @Test

@@ -1,42 +1,42 @@
 @startuml
 
 class App {
+    +void start()
     +void main()
-    +void addToDoList()
-    +void removeToDoList()
-    +void editTitleToDoList()
-    +void addItemToDoList()
-    +void removeItemToDoList()
-    +void editToDoListItemDescription()
-    +void editToDoListItemDueDate()
-    +void markToDoListItemComplete()
-    +void displayAllToDoListItems()
-    +void displayAllToDoListIncompleteItems()
-    +void displayAllToDoListCompleteItems()
-    +void sortToDoListByDate()
-    +void saveToDoList()
-    +void saveAllToDoLists()
-    +void loadToDoList()
-    +void loadAllToDoLists()
 }
+
+class FXMLController {
+    +static ArrayList<Item> items
+    +static ToDoList toDoList
+    -Labels
+    -TextFields
+    -TextAreas
+    +void setMainScene()
+    +void initialize()
+    +void allButtonActions()
+}
+
+class FxmlLoader {
+    -Pane view
+    +Pane getPage()
+}
+
+FXMLController <- FxmlLoader
 
 App <- ToDoList
 
 class ToDoList  {
-    -String title
     -ArrayList<Item> items
-    +String getTitle()
     +ArrayList<Item> getItemList()
-    +void editTitle()
     +void addItem()
     +void removeItem()
+    +void clearAllItems()
     +void editItemDescription()
     +void editDueDate()
     +void markItemComplete()
-    +void displayAllItems()
-    +void displayIncompleteItems()
-    +void displayCompleteItems()
-    +void sortByDate
+    +String displayAllItems()
+    +String displayIncompleteItems()
+    +String displayCompleteItems()
     +void saveItems()
 }
 
@@ -49,9 +49,9 @@ class Item {
     +void editDescription()
     +void editDueDate()
     +void markComplete()
-    +void displayItem()
-    +void getDescription()
-    +void getDueDate()
-    +void getComplete()
+    +String getDescription()
+    +String getDueDate()
+    +boolean getComplete()
 }
+
 @enduml

@@ -21,21 +21,21 @@
             <font>
                 <Font size="15.0" />
             </font></Button>
-      <Button layoutX="138.0" layoutY="230.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="190.0" style="-fx-background-color: #9D98F7;" text="Load a To Do List">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
-      <Button layoutX="138.0" layoutY="334.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="190.0" style="-fx-background-color: #9D98F7;" text="Load Multiple To Do Lists">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
+        <Button layoutX="138.0" layoutY="230.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="190.0" style="-fx-background-color: #9D98F7;" text="Load a To Do List">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button layoutX="138.0" layoutY="334.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="190.0" style="-fx-background-color: #9D98F7;" text="Load Multiple To Do Lists">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
     </children>
 </AnchorPane>
